@@ -2,7 +2,9 @@ import { UserRepository } from "@repositories/userRepositories"
 import { UserService } from "@services/userService"
 import { IUserRepository, IUserService, User } from "interfaces/User"
 
-import { jwt } from 'jsonwebtoken'
+import { Request, Response } from 'express'
+
+import jwt from 'jsonwebtoken'
 
 const userRepository: IUserRepository = new UserRepository()
 const userService: IUserService = new UserService(userRepository)
