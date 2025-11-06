@@ -2,7 +2,7 @@ import "module-alias/register"
 
 import { app } from '@server/server'
 
-import dotenv from 'dotenv'
+import 'dotenv/config'
 
 // import 'dotenv/config'
 
