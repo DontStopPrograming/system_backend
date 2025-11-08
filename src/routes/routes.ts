@@ -13,7 +13,7 @@ import { checkRoles } from "@middlewares/roles";
 export const router = Router()
 
 // AUTH --------------------------------------------------------------------
-router.post('/auth/register', checkRoles, registerUser)
+router.post('/auth/register', registerUser)
 router.post('/auth/login', loginUser)
 
 //USER --------------------------------------------------------------------
