@@ -11,7 +11,7 @@ const userService: IUserService = new UserService(userRepository)
 
 export const registerUser = async (req: Request, res: Response) => {
     try {
-        const { name, username, email, password, roles, permissions }: User = req.body
+        const { name, username, email, password }: User = req.body
         const userExists = await userService.findUserByEmail(email)
         if (userExists) return res.status(400).json({ message: 'Email already exist!!!' })
 
